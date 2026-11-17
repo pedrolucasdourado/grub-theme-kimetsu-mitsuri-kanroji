@@ -1,0 +1,67 @@
+# NeonBraid — tema GRUB
+title-text: ""
+desktop-image: "background.png"
+desktop-color: "#000000"
+terminal-font: "DejaVu Sans Regular 32"
+
+# Título acima do menu
++ label {
+    left = 66%
+    top = 30%
+    width = 31%
+    height = 80
+    text = "ESCOLHA O SISTEMA"
+    font = "DejaVu Sans Bold 64"
+    color = "#ff4fd8"
+}
+
++ boot_menu {
+    left = 66%
+    top = 37%
+    width = 31%
+    height = 40%
+    item_font = "DejaVu Sans Regular 40"
+    item_color = "#c9a6d6"
+    selected_item_font = "DejaVu Sans Bold 44"
+    selected_item_color = "#b6ff3c"
+    icon_width = 80
+    icon_height = 80
+    item_icon_space = 32
+    item_height = 112
+    item_padding = 0
+    item_spacing = 16
+    menu_pixmap_style = ""
+    item_pixmap_style = "item_*.png"
+    selected_item_pixmap_style = "select_*.png"
+    scrollbar = false
+}
+
+# Contagem regressiva
++ label {
+    id = "__timeout__"
+    left = 66%
+    top = 79%
+    width = 31%
+    height = 48
+    text = "Iniciando em %d s"
+    font = "DejaVu Sans Regular 40"
+    color = "#ff4fd8"
+}
+
+# Dica de teclas
++ label {
+    left = 66%
+    top = 93%
+    width = 31%
+    height = 40
+    text = "↑ ↓ selecionar   ·   Enter iniciar   ·   e editar   ·   c console"
+    font = "DejaVu Sans Regular 32"
+    color = "#8a6a99"
+}
+
+# Janela do terminal (aparece ao iniciar um sistema) em tela cheia, para não surgir um quadrado preto
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
